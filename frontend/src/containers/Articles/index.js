@@ -1,7 +1,8 @@
 import React from "react";
 import Articles from "../../components/Articles";
+import TitleTest from "../../components/titleTest";
 import Query from "../../components/Query";
-import ARTICLES_QUERY from "../../queries/article/articles";
+import {ARTICLES_QUERY, TITLE_QUERY} from "../../queries/article/articles";
 
 const Home = () => {
   return (
@@ -12,6 +13,16 @@ const Home = () => {
           <Query query={ARTICLES_QUERY}>
             {({ data: { articles } }) => {
               return <Articles articles={articles} />;
+
+            }}
+          </Query>
+
+          <Query query={TITLE_QUERY}>
+            {({ data: { title } }) => {
+              
+              
+              // return <TitleTest articles={articles} />;
+            return <div>{title.title}</div>
             }}
           </Query>
         </div>

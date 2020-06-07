@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Card";
 
-const Articles = ({ articles }) => {
+const TitleTest = ({ articles }) => {
  
   const leftArticlesCount = Math.ceil(articles.length / 5);
   const leftArticles = articles.slice(0, leftArticlesCount);
@@ -31,4 +31,4 @@ const Articles = ({ articles }) => {
   );
 };
 
-export default Articles;
+export default TitleTest;

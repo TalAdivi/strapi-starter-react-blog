@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aboutuses",
+  "info": {
+    "name": "AboutUs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Summary": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Credentials": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SupportersMessage": {
+      "type": "richtext"
+    }
+  }
+}
